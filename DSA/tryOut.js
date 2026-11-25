@@ -78,14 +78,14 @@ const secondSmallest=(arr)=>{
             second=smallest;
             smallest=arr[i];
         }
-        else if(arr[i]<second && arr[i]!=smallest){
+        else if(arr[i]<second && arr[i]>smallest){
             second=arr[i];
         }
     }
     return second;
 }
 
-// console.log(secondSmallest([-1,2,3,4,1,6,7,9,8,-100,11,-3]));
+console.log(secondSmallest([-1,2,3,4,1,6,7,9,8,-100,11,-3]));
 
 const reverse=(arr)=>{
     let reversed=[];
@@ -155,7 +155,6 @@ const duplicate=(arr)=>{
         }
     }
     return unique;
-    
 }
 
 // console.log(duplicate([1,2,3,1,2,4,5,5,6,7,8]));
@@ -279,7 +278,7 @@ const moveZeroToBegining1=(arr)=>{
     return arr;
 }
 
-// console.log(moveZeroToBegining1([0,1,2,0,0,3,4,0]));   ---------
+// console.log(moveZeroToBegining1([0,1,2,0,0,3,4,0]));
 
 const missingNumber=(arr)=>{
     let n=arr.length+1;
@@ -631,7 +630,7 @@ const reverseString=(str)=>{
 
 const vowels=(str)=>{
     let count=0;
-    for(let i=0;i<str.length-1;i++){
+    for(let i=0;i<str.length;i++){
         let char=str[i].toLowerCase();
         if(char==="a"||char==="e"||char==="i"||char==="o"||char==="u"){
             count++;
