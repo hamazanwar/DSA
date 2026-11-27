@@ -86,6 +86,9 @@ class BinarySearchTree{
             }
         }
     }
+    isEmpty(){
+        return this.root===null;
+    }
 }
 
 const bst = new BinarySearchTree();

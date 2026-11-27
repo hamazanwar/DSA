@@ -35,11 +35,11 @@ class Queue{
     isEmpty(){
         return this.items.length===0;
     }
-    front(){
+    rear(){
         if(this.isEmpty()){
             return "Queue is empty";
         }
-        return this.items[0];
+        return this.items[this.items.length-1];
     }
     size(){
         return this.items.length;
@@ -57,12 +57,12 @@ const myQueue=new Queue();
 myQueue.enqueue(10);
 myQueue.enqueue(20);
 myQueue.enqueue(30);
-myQueue.dequeue();
-myQueue.dequeue();
+// myQueue.dequeue();
+// myQueue.dequeue();
 // console.log(myQueue.dequeue());
 // console.log(myQueue.dequeue());
-// myQueue.enqueue(40);
-// myQueue.print();
+myQueue.enqueue(40);
+myQueue.print();
 
 
 
@@ -103,11 +103,11 @@ MyCircularQueue.prototype.isFull=function(){
 }
 
 const test=new MyCircularQueue(3);
-test.enqueue(1);
-test.enqueue(2);
-test.enqueue(3);
-test.dequeue();
-test.enqueue(5);
-console.log(test.rear());
-console.log(test.isFull());
-console.log(test.front(), test.rear());
+// test.enqueue(1);
+// test.enqueue(2);
+// test.enqueue(3);
+// test.dequeue();
+// test.enqueue(5);
+// console.log(test.rear());
+// console.log(test.isFull());
+// console.log(test.front(), test.rear());

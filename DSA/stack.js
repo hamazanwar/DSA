@@ -59,7 +59,7 @@ stackk.push(20);
 stackk.push(30);
 stackk.push(40);
 stackk.push(50);
-stackk.pop();
+// stackk.pop();
 // console.log(stackk.peek());
 // console.log(stackk.isEmpty());
 // console.log(stackk.size());

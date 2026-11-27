@@ -32,7 +32,7 @@ const smallest=(arr)=>{
     return small;
 }
 
-// console.log(smallest([-1,2,9,6,5,4,-3]));
+// console.log(smallest([-1,2,9,6,5,4,-3,5]));
 
 const largestSmallest=(arr)=>{
     let small=arr[0];
@@ -104,10 +104,10 @@ const reverse1=(arr)=>{
         arr[i]=arr[arr.length-i-1];
         arr[arr.length-i-1]=reversed;
     }
-    return reversed;
+    return arr;
 }
 
-// console.log(reverse([1,2,3,4,5,6,7,8,9,0]));
+// console.log(reverse1([1,2,3,4,5,6,7,8,9,0]));
 
 const countEvenOdd=(arr)=>{
     let countEven=0;
@@ -350,8 +350,9 @@ const insertionSort=(arr)=>{
     for (let i = 1; i < arr.length; i++){
         let key = arr[i];
         let j = i - 1;
-        for (; j >= 0 && arr[j] > key; j--) {
+        while( j >= 0 && arr[j] > key) {
             arr[j + 1] = arr[j];
+            j--;
         }
         arr[j + 1] = key;
     }
@@ -374,8 +375,8 @@ const binarySearch=(arr,target)=>{
         else{
             right=mid-1;
         }
-    }
-    return;
+    }   
+    return "not found";
 }
 
 // console.log(binarySearch([10,20,30,40,50,60,70,80],50));
@@ -416,7 +417,7 @@ const countUpp=(arr)=>{
     return count;
 }
 
-// console.log(countUpp(["Hamaz","Anwar","Ameer","Arun","Afna","Nihala"]));
+// console.log(countUpp(["Hamaz","Anwar","Ameer","Arun","Afna","NihalaA"]));
 
 const countUppAll=(arr)=>{
     let count=0;
